@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/dioskuroi/webpack-pratice/issues"
   },
-  "homepage": "https://github.com/dioskuroi/webpack-pratice#readme"
+  "homepage": "https://github.com/dioskuroi/webpack-pratice#readme",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  }
 }
