@@ -1,0 +1,20 @@
+{
+  "name": "webpack-pratice",
+  "version": "1.0.0",
+  "description": "a project of webpack-pratice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dioskuroi/webpack-pratice.git"
+  },
+  "keywords": [],
+  "author": "xujun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dioskuroi/webpack-pratice/issues"
+  },
+  "homepage": "https://github.com/dioskuroi/webpack-pratice#readme"
+}
