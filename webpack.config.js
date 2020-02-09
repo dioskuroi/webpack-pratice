@@ -30,6 +30,15 @@ module.exports = {
             limit: 20480  // ? 设置 2kb 以下的文件才打包成base64格式
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',  // ? 将样式内联到 html 文件中
+          'css-loader', // ? 分析 css 文件引用关系并合并
+          'sass-loader', // ? 将 scss 文件转换为 css 文件
+          'postcss-loader', // ? 配置写在 postcss.config.js 文件中，postcss 能够按照规则修改所有样式文件，比如：autoprefixer 添加厂商前缀
+        ]
       }
     ]
   }
