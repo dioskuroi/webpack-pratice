@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 /**
- * @type {import('webpack').Configuration}
+ * @type {import('webpack').Configuration}  // ? 引入 typescript 智能提示
  */
 module.exports = {
   entry: {  // ? 入口文件配置，也可以是个对象或者数组，数组就表示有多个入口文件， 对象则表示需要生成多个 js 文件
