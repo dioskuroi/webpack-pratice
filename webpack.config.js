@@ -16,7 +16,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist') // ? 输出文件路径
   },
   mode: 'development',  // ? 打包模式
-  // ? sourceMap 配置：cheap 只对应到行，module 对应第三方库代码，eval 已 eval 的形式写到 js 文件中，
+  // ? sourceMap 配置：cheap 只对应到行，module 对应第三方库代码，eval 已 eval 的形式写到 js 文件中，inline 打包进 js 文件中
   devtool: 'cheap-module-eval-source-map',  // ? development 推荐配置
   // devtool: 'cheap-module-source-map', // ? production 推荐配置
   plugins: [
