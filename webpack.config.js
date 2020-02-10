@@ -26,7 +26,7 @@ module.exports = {
     new CleanWebpackPlugin()  // ? 打包前删除 dist 目录下的所有文件
   ],
   module: {
-    rules: [
+    rules: [  // ? 配置打包文件规则
       // {
       //   test: /\.jpeg$/,  // ? 匹配 jpeg 文件，使用该规则进行打包
       //   use: {
