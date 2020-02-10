@@ -6,9 +6,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
  * @type {import('webpack').Configuration}
  */
 module.exports = {
-  entry: './src/index.js',  // ? 入口文件配置，也可以是个对象
+  entry: {  // ? 入口文件配置，也可以是个对象或者数组，数组就表示有多个入口文件， 对象则表示需要生成多个 js 文件
+    main: './src/index.js', 
+    sub: './src/index.js'  // ? 打包生成多个 js 文件
+  },  
   output: {                 // ? 打包输出配置
-    filename: 'bundle.js',  // ? 输出文件名
+    publicPath: 'http://cdn.com/',
+    filename: '[name].js',  // ? 输出文件名 这里也可以使用占位符
     path: path.resolve(__dirname, 'dist') // ? 输出文件路径
   },
   mode: 'development',  // ? 打包模式
