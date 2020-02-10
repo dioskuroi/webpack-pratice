@@ -8,14 +8,17 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   entry: {  // ? 入口文件配置，也可以是个对象或者数组，数组就表示有多个入口文件， 对象则表示需要生成多个 js 文件
     main: './src/index.js', 
-    sub: './src/index.js'  // ? 打包生成多个 js 文件
+    // sub: './src/index.js'  // ? 打包生成多个 js 文件
   },  
   output: {                 // ? 打包输出配置
-    publicPath: 'http://cdn.com/',
+    // publicPath: 'http://cdn.com/',  // ? 打包后的 url 前缀。
     filename: '[name].js',  // ? 输出文件名 这里也可以使用占位符
     path: path.resolve(__dirname, 'dist') // ? 输出文件路径
   },
   mode: 'development',  // ? 打包模式
+  // ? sourceMap 配置：cheap 只对应到行，module 对应第三方库代码，eval 已 eval 的形式写到 js 文件中，
+  devtool: 'cheap-module-eval-source-map',  // ? development 推荐配置
+  // devtool: 'cheap-module-source-map', // ? production 推荐配置
   plugins: [
     new HtmlWebpackPlugin({ // ? 会在打包结束后，自动生成一个 html 文件，将打包后的 js 自动引入到 html 中
       template: './src/index.html'  // ? html 文件模版

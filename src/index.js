@@ -1,6 +1,8 @@
 import imgSrc from './cat.jpeg'
 import './index.scss'
 
+throw Error()
+
 const root = document.querySelector('#root')
 
 const img = new Image()
